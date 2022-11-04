@@ -76,11 +76,6 @@ select {
 body {
   background-color: #e8e8e8;
 }
-body > div {
-  max-width: 750px;
-  margin: auto;
-  position: relative;
-}
 h1,
 h2,
 h3,
@@ -101,8 +96,6 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  max-width: 750px;
-  margin: auto;
 }
 #frame svg {
   fill: #313131;
@@ -110,64 +103,69 @@ p {
 .frame-corner {
   width: 10%;
   position: absolute;
-  z-index: 1;
 }
 .frame-corner-top-left {
-  transform: rotate(90deg);
+  transform: rotate(90deg) translate(-11.5%, 13.5%);
 }
 .frame-corner-top-right {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translate(-8.5%, 15.5%);
   right: 0;
 }
 .frame-corner-bottom-left {
+  transform: translate(-8.5%, 15.5%);
   bottom: 0;
 }
 .frame-corner-bottom-right {
-  transform: rotate(270deg);
+  transform: rotate(270deg) translate(-10.5%, 12.5%);
   bottom: 0;
   right: 0;
+}
+@media screen and (min-width: 375px) {
+  .frame-corner-top-left {
+    transform: rotate(90deg) translate(-18.5%, 17.5%);
+  }
+  .frame-corner-top-right {
+    transform: rotate(180deg) translate(-8.5%, 23.5%);
+    right: 0;
+  }
+  .frame-corner-bottom-left {
+    transform: translate(-12.5%, 25.5%);
+    bottom: 0;
+  }
+  .frame-corner-bottom-right {
+    transform: rotate(270deg) translate(-16.5%, 15.5%);
+    bottom: 0;
+    right: 0;
+  }
+}
+.frame-sides {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .frame-side {
   width: 40%;
-  position: absolute;
-  top: 30vh;
 }
 .frame-side-left {
-  transform: translateX(-40%);
-  left: 0;
+  transform: translateX(-47.5%);
 }
 .frame-side-right {
-  transform: translateX(40%);
-  right: 0;
-}
-.content-dissolve-top {
-  left: 0;
-  right: 0;
-  height: 7.5vh;
-  position: fixed;
-  margin: auto;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), #e8e8e8 45%);
-}
-.content-dissolve-bottom {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 7.5vh;
-  position: fixed;
-  margin: auto;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #e8e8e8 45%);
+  transform: translateX(47.5%);
 }
 
 #content {
-  width: 85%;
-  height: 90vh;
-  margin: auto;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
   text-align: center;
+  width: 80vw;
+  margin: auto;
 }
 #header {
-  margin-top: 7.5vh;
   color: #880808;
   text-shadow: -2px 0px #313131;
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+#content p {
+  padding-bottom: 10px;
 }
