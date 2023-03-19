@@ -14,47 +14,55 @@ header > * {
     flex: 1 1 0px;
     max-width: 250px;
 }
+header > nav {
+    max-width: 350px;
+}
 header ul {
     display: flex;
     justify-content: space-between;
 }
-header a {
-    text-decoration: none;
-}
 header li {
+    margin-left: 10px;
+}
+header p {
     padding: 0.5rem;
     transition-duration: 0.2s;
 }
-header li::before {
+header p::before, header p::after {
     content: "";
+    transition: 0.5s ease;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+}
+header p::before {
     background: linear-gradient(to right, transparent 50%, var(--color--primary) 50%) left;
     background-size: 200% 100%;
-    transition: 0.5s ease;
-    height: 1px;
-    width: 50%;
-    position: absolute;
-    bottom: 0;
     left: 0;
 }
-header li::after {
-    content: "";
+header p::after {
     background: linear-gradient(to left, transparent 50%, var(--color--primary) 50%) right;
     background-size: 200% 100%;
-    transition: 0.5s ease;
-    height: 1px;
-    width: 50%;
-    position: absolute;
-    bottom: 0;
     right: 0;
 }
-header li:hover {
+header p:hover {
     transform: scale(1.2);  
 }
-header li:hover::before {
+header p:hover::before {
     background-position: right; 
 }
-header li:hover::after {
+header p:hover::after {
     background-position: left;  
+}
+header a {
+    text-decoration: none;
+}
+header a:link {
+    color: var(--color--accent)
+}
+header a:visited {
+    color: var(--color--primary)
 }
 .header-contain > div {
     position: absolute;
