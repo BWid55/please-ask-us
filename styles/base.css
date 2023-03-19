@@ -49,7 +49,7 @@ table {
   --color--accent: rebeccapurple;
 }
 *:focus {
-  outline: 0.4rem solid red;
+  outline: none;
 }
 html {
   color: var(--color--primary);
