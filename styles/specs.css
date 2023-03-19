@@ -1,0 +1,66 @@
+.header-contain {
+    position: sticky;
+    top: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5% 0;
+    background-color: var(--color--secondary);
+}
+header > * {
+    display: block;
+    flex: 1 1 0px;
+    max-width: 250px;
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+header a {
+    text-decoration: none;
+}
+header li {
+    padding: 0.5rem;
+    transition-duration: 0.2s;
+}
+header li::before {
+    content: "";
+    background: linear-gradient(to right, transparent 50%, var(--color--primary) 50%) left;
+    background-size: 200% 100%;
+    transition: 0.5s ease;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+header li::after {
+    content: "";
+    background: linear-gradient(to left, transparent 50%, var(--color--primary) 50%) right;
+    background-size: 200% 100%;
+    transition: 0.5s ease;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+header li:hover {
+    transform: scale(1.2);  
+}
+header li:hover::before {
+    background-position: right; 
+}
+header li:hover::after {
+    background-position: left;  
+}
+.header-contain > div {
+    position: absolute;
+    bottom: 0;
+    border: none;
+    height: 20px;
+    border-bottom: 1px solid var(--color--primary);
+    box-shadow: 0 10px 10px -7px var(--color--accent);
+}
