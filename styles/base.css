@@ -41,6 +41,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+button{
+    all: unset
+}
+a, a:link, a:active, a:hover {
+    outline: none;
+}
+a:focus:not(:active):not(:hover) {
+    outline: 0.4rem solid red;
+}
 
 :root {
   font-size: 62.5%;
@@ -86,9 +95,6 @@ p {
     line-height: 35px;
   }
   p {
-    font-size: 14px;
     line-height: 21px;
-    padding-left: 0;
-    padding-right: 0;
   }
 }

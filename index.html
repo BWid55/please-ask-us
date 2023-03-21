@@ -29,13 +29,14 @@
         <a href="/">
           <img style="width:100%;" alt="Please Ask Us homepage" src="./svgs/logo.svg">
         </a>
-        <nav>
+        <button id="mobile-navigation-button"><img style="float:right;width:50px;" alt="Open mobile navigation" src="./svgs/mobile-nav-button.svg"></button>
+        <nav aria-hidden="true">
           <ul>
-            <li><p><a href="/" aria-label="Homepage">Home</a></p></li>
-            <li><p><a href="/support-options" aria-label="Support page">Support</a></li>
-            <li><p><a href="/about-us" aria-label="About us page">About</a></p></li>
-            <li><p><a href="/blog-home" aria-label="Blog homepage">Blog</a></p></li>
-            <li><p><a href="/contact" aria-label="Contact page">Contact</a></p></li>
+            <li><a tabindex="-1" href="/about-us" aria-label="About us page"><p>About</p></a></li>
+            <li><a tabindex="-1" href="/" aria-label="Homepage"><p>Home</p></a></li>
+            <li><a tabindex="-1" href="/contact" aria-label="Contact page"><p>Contact</p></a></li>
+            <li><a tabindex="-1" href="/support-options" aria-label="Support page"><p>Support</p></a></li>
+            <li><a tabindex="-1" href="/blog-home" aria-label="Blog homepage"><p>Blog</p></a></li>
           </ul>
         </nav>
       </header>
@@ -48,7 +49,7 @@
       <p>We hope that our website will serve as a hub for people who want to help others, who want to give back to their communities, and who believe in the power of simple kindness. We invite you to join us on this journey and to make a difference in the lives of others, one act of kindness at a time. Together, let's create a world that's a little bit kinder, a little bit more compassionate, and a little bit brighter.</p>
       <p>At Please Ask Us, we believe in complete transparency when it comes to finances. We want our visitors to know that every dollar we receive goes directly towards running our website and improving our movement. We are committed to using your contributions wisely, and we will always be open and honest about where your money is going. You can trust that your support will make a real difference in the lives of others, and we thank you for being a part of our mission to spread kindness and compassion.</p>
     </main>
-    <script src="./js/focus.js"></script>
+    <script src="./js/default.js"></script>
     <script defer src="./js/gsap.js"></script>
   </body>
 </html>
