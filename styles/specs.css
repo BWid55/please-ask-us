@@ -16,6 +16,13 @@ header > * {
 }
 header > button {
     max-width: 50px;
+    transition-duration: 1s;
+}
+header > button img {
+    transition-duration: 0.75s;
+}
+header > button img:hover {
+    transform: scale(1.2);
 }
 header > nav {
     position: absolute;
@@ -29,11 +36,13 @@ header li {
     margin-left: auto;
     margin-right: auto;
 }
-header p {
+header nav a {
+    display: block;
     padding: 0.5rem;
+    text-decoration: none;
     transition-duration: 0.2s;
 }
-header p::before, header p::after {
+header nav a::before, header nav a::after {
     content: "";
     transition: 0.5s ease;
     height: 1px;
@@ -41,32 +50,29 @@ header p::before, header p::after {
     position: absolute;
     bottom: 0;
 }
-header p::before {
+header nav a::before {
     background: linear-gradient(to right, transparent 50%, var(--color--primary) 50%) left;
     background-size: 200% 100%;
     left: 0;
 }
-header p::after {
+header nav a::after {
     background: linear-gradient(to left, transparent 50%, var(--color--primary) 50%) right;
     background-size: 200% 100%;
     right: 0;
 }
-header p:hover {
+header nav a:hover {
     transform: scale(1.2);  
 }
-header p:hover::before {
+header nav a:hover::before {
     background-position: right; 
 }
-header p:hover::after {
+header nav a:hover::after {
     background-position: left;  
 }
-header a {
-    text-decoration: none;
-}
-header a:link {
+header nav a:link {
     color: var(--color--accent)
 }
-header a:visited {
+header nav a:visited {
     color: var(--color--primary)
 }
 .header-contain > div {
