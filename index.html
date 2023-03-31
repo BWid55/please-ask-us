@@ -29,10 +29,10 @@
         <a href="/">
           <img style="width:100%;" alt="Please Ask Us homepage" src="./svgs/logo.svg">
         </a>
-        <button aria-expanded="false"><img style="float:right;width:50px;" alt="Open mobile navigation" src="./svgs/mobile-nav-button.svg"></button>
-        <nav aria-hidden="true">
+        <button aria-expanded="false" aria-controls="primaryNavigation"><img style="float:right;width:50px;" alt="Open mobile navigation" src="./svgs/mobile-nav-button.svg"></button>
+        <nav id="primaryNavigation" aria-hidden="true">
           <ul>
-            <li><a class="p" tabindex="-1" href="/" aria-label="Homepage">Home</a></li>
+            <li><a class="p" tabindex="-1" href="/" aria-label="Homepage" aria-current="page">Home</a></li>
             <li><a class="p" tabindex="-1" href="/about-us" aria-label="About us page">About</a></li>
             <li><a class="p" tabindex="-1" href="/contact" aria-label="Contact page">Contact</a></li>
             <li><a class="p" tabindex="-1" href="/support-options" aria-label="Support page">Support</a></li>

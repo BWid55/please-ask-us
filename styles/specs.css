@@ -25,11 +25,16 @@ header > button img:hover {
     transform: scale(1.2);
 }
 header > nav {
+    transition-duration: 1s;
+    max-height: 0;
     position: absolute;
     max-width: none;
     top: 100%;
     width: 100%;
     background-color: var(--color--secondary);
+}
+header > nav[aria-hidden = "false"] {
+    max-height: 10000000px;
 }
 header li {
     max-width: min-content;
@@ -37,10 +42,17 @@ header li {
     margin-right: auto;
 }
 header nav a {
+    visibility: visible;
     display: block;
     padding: 0.5rem;
     text-decoration: none;
     transition-duration: 0.2s;
+}
+header nav a[tabindex = "-1"]{
+    visibility: hidden;
+}
+header nav a[aria-current] {
+    text-decoration: underline;
 }
 header nav a::before, header nav a::after {
     content: "";
@@ -90,6 +102,9 @@ header nav a:visited {
     header > nav {
         max-width: 350px;
         position: static;
+    }
+    header nav a[aria-current] {
+        text-decoration: none;
     }
     header ul {
         display: flex;

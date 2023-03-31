@@ -96,3 +96,8 @@ p, a.p {
     line-height: 21px;
   }
 }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color--secondary: #EBEAF5;
+      }
+}
