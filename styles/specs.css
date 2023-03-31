@@ -25,8 +25,9 @@ header > button img:hover {
     transform: scale(1.2);
 }
 header > nav {
-    transition-duration: 1s;
+    overflow: hidden;
     max-height: 0;
+    transition: max-height 0.75s cubic-bezier(0, 1, 0, 1);
     position: absolute;
     max-width: none;
     top: 100%;
@@ -34,7 +35,8 @@ header > nav {
     background-color: var(--color--secondary);
 }
 header > nav[aria-hidden = "false"] {
-    max-height: 10000000px;
+    max-height: 1000px;
+    transition: max-height 1s ease-in-out;
 }
 header li {
     max-width: min-content;
@@ -42,14 +44,10 @@ header li {
     margin-right: auto;
 }
 header nav a {
-    visibility: visible;
     display: block;
     padding: 0.5rem;
     text-decoration: none;
     transition-duration: 0.2s;
-}
-header nav a[tabindex = "-1"]{
-    visibility: hidden;
 }
 header nav a[aria-current] {
     text-decoration: underline;
